@@ -1,7 +1,27 @@
 {% extends 'base.html' %}
 
-{% block title %} Product List {% endblock %}
+{% block title %} Product Detail {% endblock %}
 
 {% block content %}
+
+<div class="container card p-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="{{ product.image.url }}" alt="product" class="img-fluid">
+            </div>
+            <div class="col-sm-6">
+
+                <div class="card-body">
+                    <p class="card-text">Name: {{ product.name }}</p>
+                    <p class="card-text">Category: {{ product.category.name }}</p>
+                    <p class="card-text">Description: {{ product.description }}</p>
+                    <p class="card-text">Price: {{ product.price }}</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
